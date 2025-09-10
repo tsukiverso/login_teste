@@ -7,18 +7,23 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
+        title: const Text('Home'),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/');
+            },
+          ),
+        ],
       ),
-      backgroundColor: Colors.blue,
-      body: Center(
+      body: const Center(
         child: Text(
-          'Logado com sucesso, só falta o resto da página.',
-          style: TextStyle(
-            fontSize: 24, 
-            fontWeight: FontWeight.bold),
+          'FALTA O RESTO DA PÁGINA!',
+          style: TextStyle(fontSize: 24),
         ),
-      ),  
-    ); 
+      ),
+    );
   }
 }

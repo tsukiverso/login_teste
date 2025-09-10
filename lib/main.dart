@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:login_app/src/auth/presentation/login_screen.dart';
+import 'package:login_app/src/auth/presentation/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: LoginScreen(), debugShowCheckedModeBanner: false,);
+    return MaterialApp(
+      home: LoginPage(), 
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
